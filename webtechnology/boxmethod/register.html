@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+
+    <style>
+        body {
+            background-color: #E8F5E9;
+            margin: 0;
+            font-family: Arial;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #header {
+            background-color: #228B22;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        #menu {
+            background-color: #006400;
+            text-align: center;
+            padding: 15px;
+        }
+
+        #menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 20px;
+            padding: 10px;
+        }
+
+        #menu a:hover {
+            background-color: #5A5A5A;
+        }
+
+        #registration-box {
+            width: 650px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #228B22;
+            box-sizing: border-box;
+        }
+
+        .heading {
+            text-align: center;
+            color: #228B22;
+            font-family: Georgia;
+        }
+
+        .form-row {
+            width: 100%;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-row b {
+            width: 170px;
+            margin-right: 10px;
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .form-row input[type="text"],
+        .form-row input[type="password"] {
+            width: 250px;
+            height: 32px;
+            background-color: #E8F5E9;
+            border: 1px solid #228B22;
+            box-sizing: border-box;
+        }
+
+        .gender-row,
+        .country-row,
+        .agreement-row {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .country-row select {
+            padding: 7px;
+            background-color: #E8F5E9;
+            border: 1px solid #228B22;
+        }
+
+        .buttons {
+            text-align: center;
+            margin: 25px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #228B22;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #006400;
+        }
+
+        #footer {
+            margin-top: auto;
+            background-color: #228B22;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header">
+        <h2>USER REGISTRATION SYSTEM</h2>
+        <small>Welcome to My Website</small>
+    </div>
+
+    <div id="menu">
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <a href="thankyou.html">Thank You</a>
+    </div>
+
+    <div id="registration-box">
+        <div class="heading">
+            <h2>REGISTRATION FORM</h2>
+        </div>
+
+        <form action="thankyou.html" method="get">
+
+            <div class="form-row">
+                <b>Login Name:</b>
+                <input type="text" name="loginname"
+                       placeholder="Enter login name" required>
+            </div>
+
+            <div class="form-row">
+                <b>Password:</b>
+                <input type="password" name="password"
+                       placeholder="Enter password" required>
+            </div>
+
+            <div class="form-row">
+                <b>Confirm Password:</b>
+                <input type="password" name="resetpassword"
+                       placeholder="Confirm password" required>
+            </div>
+
+            <div class="gender-row">
+                <b>Gender:</b>
+                <input type="radio" name="gender" value="Male" required> Male
+                <input type="radio" name="gender" value="Female"> Female
+            </div>
+
+            <div class="country-row">
+                <b>Country:</b>
+                <select name="country" required>
+                    <option value="">Select Country</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="India">India</option>
+                    <option value="China">China</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="United States">United States</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <b>Select Names:</b>
+                <span>
+                    <input type="checkbox" name="names" value="Ayesha"> Ayesha<br>
+                    <input type="checkbox" name="names" value="Sara"> Sara<br>
+                    <input type="checkbox" name="names" value="Hina"> Hina<br>
+                    <input type="checkbox" name="names" value="Zoya"> Zoya
+                </span>
+            </div>
+
+            <div class="form-row">
+                <b>Licence:</b>
+                <input type="text" name="licence"
+                       placeholder="Enter licence" required>
+            </div>
+
+            <div class="agreement-row">
+                <input type="checkbox" name="agreement"
+                       value="Agreed" required>
+                I Agree with Licence
+            </div>
+
+            <div class="buttons">
+                <input type="submit" value="Register">
+                <input type="reset" value="Reset">
+            </div>
+
+        </form>
+    </div>
+
+    <div id="footer">
+        <p>Welcome to my website</p>
+    </div>
+
+</body>
+</html>
