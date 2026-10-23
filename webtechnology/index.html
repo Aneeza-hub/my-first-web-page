@@ -1,1 +1,115 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Login Website</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript File -->
+    <script src="script.js" defer></script>
+</head>
+
+<body data-theme="blue">
+
+    <!-- Header -->
+    <header class="site-header">
+        <h1>My Login Website</h1>
+    </header>
+
+    <!-- Theme Color Options -->
+    <nav class="theme-switcher" aria-label="Choose website theme">
+
+        <button
+            type="button"
+            class="theme-btn green"
+            data-theme="green">
+            Pastel Green
+        </button>
+
+        <button
+            type="button"
+            class="theme-btn blue"
+            data-theme="blue">
+            Sky Blue
+        </button>
+
+        <button
+            type="button"
+            class="theme-btn yellow"
+            data-theme="yellow">
+            Butter Yellow
+        </button>
+
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Login Box -->
+        <section class="login-card">
+
+            <h2>Login</h2>
+
+            <form id="loginForm">
+
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required>
+                </div>
+
+                <!-- Password Field -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required>
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit" class="login-btn">
+                    Login
+                </button>
+
+                <!-- Success Message -->
+                <p
+                    id="message"
+                    role="status"
+                    aria-live="polite">
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>
+            &copy; 2026 My Login Website |
+            All Rights Reserved
+        </p>
+    </footer>
+
+</body>
+
+</html>

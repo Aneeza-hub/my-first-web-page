@@ -1,0 +1,247 @@
+
+:root {
+    --theme: #B9E5F8;
+    --hover: #A5D9F1;
+    --soft-bg: #F4FAFD;
+    --input-bg: #EAF6FC;
+    --text: #354957;
+    --border: #D5E7EF;
+}
+
+/* Soft Sky Blue */
+body[data-theme="blue"] {
+    --theme: #B9E5F8;
+    --hover: #A5D9F1;
+    --soft-bg: #F4FAFD;
+    --input-bg: #EAF6FC;
+    --border: #CDE5F0;
+}
+
+/* Soft Pastel Green */
+body[data-theme="green"] {
+    --theme: #C6E8D3;
+    --hover: #B2DCC2;
+    --soft-bg: #F5FBF6;
+    --input-bg: #EBF7EE;
+    --border: #D1E8D7;
+}
+
+/* Soft Butter Yellow */
+body[data-theme="yellow"] {
+    --theme: #FFF0B8;
+    --hover: #F8E6A0;
+    --soft-bg: #FFFCF2;
+    --input-bg: #FFF8DF;
+    --border: #F0E4BC;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background: var(--soft-bg);
+    color: var(--text);
+    transition: background 0.3s ease;
+}
+
+/* Header */
+.site-header {
+    width: 100%;
+    padding: 24px 15px;
+    text-align: center;
+    background: var(--theme);
+    color: var(--text);
+    transition: background 0.3s ease;
+}
+
+.site-header h1 {
+    font-size: 27px;
+}
+
+/* Theme Options */
+.theme-switcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 22px 15px;
+}
+
+.theme-btn {
+    padding: 11px 20px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.theme-btn:hover {
+    transform: translateY(-2px);
+}
+
+.theme-btn.green {
+    background: #D8F0DF;
+    color: #355B43;
+}
+
+.theme-btn.blue {
+    background: #D8F0FC;
+    color: #365A70;
+}
+
+.theme-btn.yellow {
+    background: #FFF4CC;
+    color: #6B5B30;
+}
+
+/* Main: Center Alignment */
+main {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 16px 40px;
+}
+
+/* Login Box */
+.login-card {
+    width: 100%;
+    max-width: 390px;
+    padding: 32px;
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-top: 5px solid var(--theme);
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(80, 110, 130, 0.09);
+    transition: border-color 0.3s ease;
+}
+
+.login-card h2 {
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 26px;
+    color: var(--text);
+}
+
+/* Email and Password */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    /* Input boxes also change with the theme */
+    background: var(--input-bg);
+    color: var(--text);
+
+    font-size: 15px;
+    transition: background 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.form-group input::placeholder {
+    color: #788D99;
+}
+
+.form-group input:focus {
+    outline: 2px solid var(--theme);
+    outline-offset: 1px;
+}
+
+.form-group input:focus-visible {
+    border-color: var(--theme);
+}
+
+/* Login Button */
+.login-btn {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-top: 5px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--theme);
+    color: var(--text);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+    background: var(--hover);
+}
+
+/* Success Message */
+#message {
+    margin-top: 18px;
+    text-align: center;
+    color: #347B50;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#message:empty {
+    display: none;
+}
+
+/* Footer */
+.site-footer {
+    width: 100%;
+    padding: 20px 12px;
+    text-align: center;
+    background: var(--theme);
+    color: var(--text);
+    transition: background 0.3s ease;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .site-header h1 {
+        font-size: 23px;
+    }
+
+    .theme-switcher {
+        gap: 8px;
+        padding: 18px 10px;
+    }
+
+    .theme-btn {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .login-card {
+        padding: 24px 20px;
+    }
+}
